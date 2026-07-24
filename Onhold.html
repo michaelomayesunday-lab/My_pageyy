@@ -1,0 +1,45 @@
+<!DOCTYPE html>  <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">  
+<title>Page On Hold</title>  
+<style>  
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(#08101f,#121d35);display:flex;justify-content:center;align-items:center;height:100vh;color:#fff}  
+.card{width:90%;max-width:380px;background:#131b2f;border-radius:28px;padding:28px;box-shadow:0 20px 40px rgba(0,0,0,.5);text-align:center;position:relative}  
+.back{position:absolute;left:18px;top:18px;background:none;border:none;color:#fff;font-size:22px;cursor:pointer}  
+.icon{font-size:70px;animation:pulse 1.6s infinite}  
+h1{margin:12px 0}  
+.btn{background:#f6b73c;border:none;padding:12px 24px;border-radius:12px;font-weight:bold;cursor:pointer}  
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none}  
+.sheet{position:absolute;left:0;right:0;bottom:0;background:#18233d;border-radius:24px 24px 0 0;padding:24px;transform:translateY(100%);transition:.3s}  
+.overlay.show{display:block}.overlay.show .sheet{transform:translateY(0)}  
+@keyframes pulse{50%{transform:scale(1.08)}}  
+</style></head>  
+<body>  
+<div class="card">  
+<button class="back" onclick="history.back()">←</button>  
+<div class="icon">⚠️</div>  
+<h1>Hello Nestor Mendoza</h1>  
+<p class="your account will be permanently suspended in 72hours time if account year bypass residue is not completely cleared">surprise.</p>  
+<button class="btn" onclick="openSheet()">See Reason</button>  
+</div>  
+<div id="ov" class="overlay" onclick="if(event.target===this)closeSheet()">  
+<div class="sheet">  
+<h2>Reasons & Solution</h2>  
+<p><b>Reason:</b> This account has being temporarily suspended due to improper year bypass and is currently undergoing investigation,if found guilty,user risk complete loss of trb account.</p>  
+<p><b>Solution:</b> contact handler to verify account year or purchase account year transition data to perfect account bypass and eliminate any unverified bypass residue.</p>  
+<button class="btn" onclick="closeSheet()">Close</button>  
+</div></div>  
+<script>  
+.surprise{
+  color: red;
+  font-style: italic;
+  animation: blink 3s infinite;
+}
+
+@keyframes blink{
+  0%,100%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.4;
+  }
+}function openSheet(){document.getElementById('ov').classList.add('show')}  
+function closeSheet(){document.getElementById('ov').classList.remove('show')}  

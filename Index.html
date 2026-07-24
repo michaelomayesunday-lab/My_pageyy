@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tier 6 Wallet - Purchase ID</title>
+
+<style>
+:root{
+    --bg:#050814;
+    --panel:#0b1020;
+    --glass:rgba(255,255,255,0.04);
+    --stroke:rgba(255,255,255,0.08);
+    --gold:#f7b733;
+    --text:#ffffff;
+    --muted:#a9a9a9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top, #14264a 0%, #050814 55%, #03040a 100%);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+    color:var(--text);
+}
+
+/* MAIN WRAPPER */
+.wrapper{
+    width:100%;
+    max-width:920px;
+    padding:40px 30px;
+    border-radius:28px;
+    border:1px solid var(--stroke);
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    box-shadow:0 30px 80px rgba(0,0,0,0.6);
+}
+
+/* HEADER */
+.brand{
+    text-align:center;
+}
+
+.logo{
+    width:95px;
+    height:95px;
+    border-radius:50%;
+    border:4px solid var(--gold);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto;
+    font-weight:bold;
+    font-size:40px;
+    color:var(--gold);
+    letter-spacing:1px;
+}
+
+.brand h1{
+    margin-top:14px;
+    font-size:40px;
+    letter-spacing:1px;
+}
+
+.brand p{
+    color:var(--muted);
+    margin-top:6px;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+/* WELCOME */
+.welcome{
+    text-align:center;
+    margin:28px 0;
+    font-size:18px;
+    color:#ddd;
+}
+
+.welcome span{
+    color:var(--gold);
+}
+
+/* CARD */
+.card{
+    background: rgba(255,255,255,0.03);
+    border:1px solid var(--stroke);
+    border-radius:28px;
+    padding:38px 30px;
+    backdrop-filter: blur(10px);
+}
+
+/* ICON */
+.icon{
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    border:1px solid var(--stroke);
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    color:var(--gold);
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    margin-top:18px;
+    font-size:22px;
+    letter-spacing:0.5px;
+}
+
+/* PRICE */
+.price{
+    text-align:center;
+    font-size:78px;
+    font-weight:700;
+    color:var(--gold);
+    margin:18px 0;
+}
+
+/* DIVIDER */
+.line{
+    height:1px;
+    background:var(--stroke);
+    margin:28px 0;
+}
+
+/* LABEL */
+.label{
+    color:#cfcfcf;
+    margin-bottom:12px;
+    font-size:14px;
+}
+
+/* WALLET BOX */
+.wallet{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+    border:1px solid var(--stroke);
+    border-radius:18px;
+    padding:18px;
+    background:rgba(0,0,0,0.2);
+}
+
+.address{
+    font-size:16px;
+    word-break:break-all;
+    flex:1;
+    color:#eaeaea;
+}
+
+.coin{
+    color:var(--gold);
+    margin-top:6px;
+    font-size:13px;
+}
+
+/* COPY BUTTON */
+.copy{
+    padding:12px 18px;
+    border-radius:12px;
+    border:1px solid var(--stroke);
+    background:transparent;
+    color:var(--gold);
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.copy:hover{
+    background:rgba(247,183,51,0.08);
+}
+
+/* NOTE */
+.note{
+    margin-top:14px;
+    font-size:13px;
+    color:var(--muted);
+}
+
+/* EMAIL */
+input{
+    width:100%;
+    padding:16px;
+    border-radius:12px;
+    border:1px solid var(--stroke);
+    background:#070b18;
+    color:white;
+    outline:none;
+    font-size:15px;
+}
+
+/* LOGIN */
+.login{
+    width:100%;
+    margin-top:18px;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:var(--gold);
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    margin-top:28px;
+    color:var(--muted);
+    font-size:13px;
+}
+
+.footer span{
+    color:var(--gold);
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="brand">
+        <div class="logo">T6</div>
+        <h1>TIER 6 WALLET</h1>
+        <p>WALLET PORTFOLIO</p>
+    </div>
+
+    <div class="welcome">
+        Welcome <span>Nestor Mendoza</span>
+    </div>
+
+    <div class="card">
+
+        <div class="icon">👛</div>
+
+        <div class="line"></div>
+
+        <div class="label">Email Address/ID</div>
+
+      <input type="text" id="email" placeholder="Enter your Email/ID">
+
+        <button class="login" onclick="goNext()">Login</button>
+
+    </div>
+
+    <div class="footer">
+        <span>🛡</span> Secure. Smart. Seamless.<br><br>
+        © 2026 Tier 6 Wallet. All rights reserved.
+    </div>
+
+</div>
+
+<script>
+function copyAddr(){
+    const text = document.getElementById("addr").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Copied!");
+}
+
+function goNext() {
+    const login = document.getElementById("email").value.trim();
+
+    if (login === "nm2nm3mm@gmail.com/NESTORDEE18") {
+        window.location.href = "onhold.html"; // Change this to your next page name if different
+    } else {
+        alert("Invalid Email/ID");
+    }
+}
+</script>
+
+</body>
+</html>
