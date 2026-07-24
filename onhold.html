@@ -1,6 +1,15 @@
 <!DOCTYPE html>  <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">  
 <title>Page On Hold</title>  
-<style>  
+  .surprise{
+  color:red;
+  font-style:italic;
+  animation:blink 3s infinite;
+}
+@keyframes blink{
+  0%,100%{opacity:1;}
+  50%{opacity:.4;}
+}
+<style> 
 body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(#08101f,#121d35);display:flex;justify-content:center;align-items:center;height:100vh;color:#fff}  
 .card{width:90%;max-width:380px;background:#131b2f;border-radius:28px;padding:28px;box-shadow:0 20px 40px rgba(0,0,0,.5);text-align:center;position:relative}  
 .back{position:absolute;left:18px;top:18px;background:none;border:none;color:#fff;font-size:22px;cursor:pointer}  
@@ -17,7 +26,9 @@ h1{margin:12px 0}
 <button class="back" onclick="history.back()">←</button>  
 <div class="icon">⚠️</div>  
 <h1>Hello Nestor Mendoza</h1>  
-<p class="your account will be permanently suspended in 72hours time if account year bypass residue is not completely cleared">surprise.</p>  
+<p cla<p class="surprise">
+  Your account will be permanently suspended in 72 hours if account year bypass residue is not completely cleared.
+</p
 <button class="btn" onclick="openSheet()">See Reason</button>  
 </div>  
 <div id="ov" class="overlay" onclick="if(event.target===this)closeSheet()">  
@@ -28,18 +39,14 @@ h1{margin:12px 0}
 <button class="btn" onclick="closeSheet()">Close</button>  
 </div></div>  
 <script>  
-.surprise{
-  color: red;
-  font-style: italic;
-  animation: blink 3s infinite;
+  <script>
+function openSheet(){
+  document.getElementById('ov').classList.add('show');
 }
 
-@keyframes blink{
-  0%,100%{
-    opacity: 1;
-  }
-  50%{
-    opacity: 0.4;
-  }
-}function openSheet(){document.getElementById('ov').classList.add('show')}  
-function closeSheet(){document.getElementById('ov').classList.remove('show')}  
+function closeSheet(){
+  document.getElementById('ov').classList.remove('show');
+}
+</script>
+</body>
+</html>
