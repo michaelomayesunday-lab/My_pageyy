@@ -26,7 +26,7 @@ h1{margin:12px 0}
 <button class="back" onclick="history.back()">←</button>  
 <div class="icon">⚠️</div>  
 <h1>Hello Nestor Mendoza</h1>  
-<p cla<p class="surprise">
+<p class="surprise">
   Your account will be permanently suspended in 72 hours if account year bypass residue is not completely cleared.
 </p
 <button class="btn" onclick="openSheet()">See Reason</button>  
@@ -38,8 +38,15 @@ h1{margin:12px 0}
 <p><b>Solution:</b> contact handler to verify account year or purchase account year transition data to perfect account bypass and eliminate any unverified bypass residue.</p>  
 <button class="btn" onclick="closeSheet()">Close</button>  
 </div></div>  
-<script>  
-  <script>
+<script>
+function openSheet(){
+  document.getElementById('ov').classList.add('show');
+}
+
+function closeSheet(){
+  document.getElementById('ov').classList.remove('show');
+}
+</script>
 function openSheet(){
   document.getElementById('ov').classList.add('show');
 }
